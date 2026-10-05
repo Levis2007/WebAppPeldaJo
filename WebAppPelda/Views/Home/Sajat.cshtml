@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Customer Details";
+}
+<h1>@ViewData["Title"]</h1>
+<p>@Model.ToString()</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nev</th>
+            <th>Cim</th>
+            <th>Email</th>
+            <th>Telefon</th>
+            <th>Pontszam</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var customer in Model)
+        {
+            <tr>
+                <td>
+                    <a asp-area="" asp-controller="Home" asp-action="Vasarlo" asp-route-id="@customer.Id">
+                        Id:@customer.Id
+                    </a>
+                </td>
+                <td>Név: @customer.Name</td>
+                <td>Cím: @customer.Address</td>
+                <td>e-mail: @customer.Email</td>
+                <td>Telefon: @customer.Phone</td>
+                <td>Pontszám: @customer.Score</td>
+            </tr>
+
+        }
+    </tbody>
+</table>
+
+
+

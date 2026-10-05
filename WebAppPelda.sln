@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36915.13 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppPelda", "WebAppPelda\WebAppPelda.csproj", "{01D62FA8-C6C9-43A4-98C5-D41A4C1CDA69}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{01D62FA8-C6C9-43A4-98C5-D41A4C1CDA69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01D62FA8-C6C9-43A4-98C5-D41A4C1CDA69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01D62FA8-C6C9-43A4-98C5-D41A4C1CDA69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01D62FA8-C6C9-43A4-98C5-D41A4C1CDA69}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4007C3AC-B3AB-45A3-A71C-D7E80C587CBC}
+	EndGlobalSection
+EndGlobal

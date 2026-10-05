@@ -1,0 +1,68 @@
+﻿@model WebAppPelda.Models.Customer
+
+@{
+    ViewData["Title"] = "Vásárló módosítása";
+}
+
+<div class="container mt-4" style="max-width: 600px;">
+    <h2 class="mb-4">Vásárló adatainak módosítása</h2>
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            @TempData["SuccessMessage"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+
+    <form method="get" asp-controller="Home" asp-action="PutCustomer" class="mb-4">
+        <label class="form-label font-weight-bold">Keresés ID alapján:</label>
+        <div class="input-group">
+            <input type="number" name="id" class="form-control" placeholder="Írd be az ID-t" value="@Model?.Id" />
+            <button type="submit" class="btn btn-secondary">Betöltés</button>
+        </div>
+    </form>
+
+    <hr />
+
+
+    <form asp-controller="Home" asp-action="PutCustomer" method="post">
+
+
+        <input type="hidden" asp-for="Id" />
+
+        <div class="mb-3">
+            <label asp-for="Id" class="form-label">Azonosító (ID):</label>
+            <input asp-for="Id" class="form-control" type="number" disabled />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Name" class="form-label">Név:</label>
+            <input asp-for="Name" class="form-control" value="@Model?.Name" />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Address" class="form-label">Cím:</label>
+            <input asp-for="Address" class="form-control" value="@Model?.Address" />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Phone" class="form-label">Telefon:</label>
+            <input asp-for="Phone" class="form-control" value="@Model?.Phone" />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Email" class="form-label">Email:</label>
+            <input asp-for="Email" class="form-control" value="@Model?.Email" />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Score" class="form-label">Pontszám:</label>
+            <input asp-for="Score" type="number" class="form-control" value="@Model?.Score" />
+        </div>
+
+
+        <button type="submit" class="btn btn-primary w-100">Mentés</button>
+    </form>
+</div>
